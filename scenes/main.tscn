@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://cs7m6h0iy6enk"]
+
+[ext_resource type="PackedScene" uid="uid://ciujaikmrydfr" path="res://scenes/kodee.tscn" id="1_b0tfb"]
+[ext_resource type="Script" path="res://gdj/com/utopiarise/demo/GarbageCollector.gdj" id="3_fhtdw"]
+[ext_resource type="PackedScene" uid="uid://cmg5im8cabjas" path="res://scenes/bag_spawner.tscn" id="3_jbsyf"]
+
+[sub_resource type="SystemFont" id="SystemFont_nd3l8"]
+font_names = PackedStringArray("PT Mono")
+
+[sub_resource type="LabelSettings" id="LabelSettings_0mtb1"]
+font = SubResource("SystemFont_nd3l8")
+font_size = 24
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Kodee" parent="." instance=ExtResource("1_b0tfb")]
+position = Vector2(687, 615)
+speed = 500.0
+
+[node name="BagSpawner" parent="." instance=ExtResource("3_jbsyf")]
+position = Vector2(2.08165e-12, 2.08165e-12)
+
+[node name="GarbageCollector" type="Node2D" parent="."]
+script = ExtResource("3_fhtdw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="HUD" type="BoxContainer" parent="CanvasLayer/Control"]
+offset_right = 379.0
+offset_bottom = 73.0
+alignment = 1
+
+[node name="HeapUsageLabel" type="Label" parent="CanvasLayer/Control/HUD"]
+layout_mode = 2
+text = "Heap Usage: 0 KB / 100 KB"
+label_settings = SubResource("LabelSettings_0mtb1")

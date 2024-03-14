@@ -1,0 +1,29 @@
+// THIS FILE IS GENERATED! DO NOT EDIT OR DELETE IT. EDIT OR DELETE THE ASSOCIATED SOURCE CODE FILE INSTEAD
+// Note: You can however freely move this file inside your godot project if you want. Keep in mind however, that if you rename the originating source code file, this file will be deleted and regenerated as a new file instead of being updated! Other modifications to the source file however, will result in this file being updated.
+
+registeredName = GarbageCollector
+fqName = com.utopiarise.demo.GarbageCollector
+relativeSourcePath = src/main/kotlin/com/utopiarise/demo/GarbageCollector.kt
+baseType = Node2D
+supertypes = [
+    godot.Node2D,
+	godot.CanvasItem,
+	godot.Node,
+	godot.Object,
+	godot.core.KtObject,
+	kotlin.Any
+]
+signals = [
+    
+]
+properties = [
+    memory_in_use,
+	maximum_memory,
+	heap_usage_label
+]
+functions = [
+    _ready,
+	_process,
+	free_memory,
+	leak_memory
+]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmg5im8cabjas"]
+
+[ext_resource type="Script" path="res://gdj/com/utopiarise/demo/BagSpawner.gdj" id="1_4gkdp"]
+
+[node name="BagSpawner" type="Node2D"]
+script = ExtResource("1_4gkdp")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.7
+autostart = true

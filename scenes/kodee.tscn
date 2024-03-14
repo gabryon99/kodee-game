@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciujaikmrydfr"]
+
+[ext_resource type="Script" path="res://gdj/com/utopiarise/demo/Kodee.gdj" id="1_sh7ve"]
+[ext_resource type="Texture2D" uid="uid://bngq2m8owpa8a" path="res://assets/kodee_bucket.png" id="2_dxksx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqsw5"]
+size = Vector2(62.1562, 57.0312)
+
+[node name="Kodee" type="Area2D"]
+scale = Vector2(-1, 1)
+script = ExtResource("1_sh7ve")
+speed = 373.664
+
+[node name="Kodee_Sprite" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dxksx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-85.0781, -68.5156)
+shape = SubResource("RectangleShape2D_sqsw5")
